@@ -3,9 +3,9 @@ package Structure;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
+
 // there is polymorphism's example
 public class Main {
-	
 
 	public static void main(String[] args) {
 		try {
@@ -14,9 +14,9 @@ public class Main {
 
 			Autobus autobus = new Autobus("Volvo", 2004, 40);
 			Autobus autobus1 = new Autobus("Electron", 2016, 31);
-			if(car.compareTo(autobus1)<0){
-			System.out.println("!!");
-			}
+			/*
+			 * if(car.compareTo(autobus1)<0){ System.out.println("!!"); }
+			 */
 			List<Car> cars = new LinkedList<Car>();
 			cars.add(car);
 			cars.add(car2);
@@ -32,6 +32,7 @@ public class Main {
 			e.printStackTrace();
 		}
 	}
+
 	// method for inputing new cars or autobuses
 	public static void input(List<Car> c) throws InvalidDataException, InvalidQuantityException {
 		Scanner sc = new Scanner(System.in);
@@ -40,23 +41,23 @@ public class Main {
 		while (choice == 1) {
 			System.out.println("If you want to input car - enter 1 \n Otherwise - 2");
 			int k = sc.nextInt();
-			if(k==1 || k==2){
-			System.out.println("Input model");
-			String model = sc.next();
-			System.out.println("Input production date");
-			int pd = sc.nextInt();
-			if (k == 2) {
-				System.out.println("Input quantity of passengers");
-				int quantity = sc.nextInt();
-				c.add(new Autobus(model, pd, quantity));
+			if (k == 1 || k == 2) {
+				System.out.println("Input model");
+				String model = sc.next();
+				System.out.println("Input production date");
+				int pd = sc.nextInt();
+				if (k == 2) {
+					System.out.println("Input quantity of passengers");
+					int quantity = sc.nextInt();
+					c.add(new Autobus(model, pd, quantity));
 
-			} else 
-				c.add(new Car(model, pd));
+				} else
+					c.add(new Car(model, pd));
 			} else
 				System.out.println("You have entered incorrect number");
-			
+
 			System.out.println("Do you want to continue? Yes - 1 / No - 0");
-			choice=sc.nextInt();
+			choice = sc.nextInt();
 		}
 	}
 }
