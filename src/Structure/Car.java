@@ -2,7 +2,7 @@ package Structure;
 
 // main class 
 // there are getters and setters - incapsulation
-// method sentinel - polymorphism
+// method 'sentinel' - polymorphism
 //also Car implements interface Comparable for comparing two objects of type Car(or our extended classes) 
 public class Car implements Comparable<Car>{
 	protected String model;

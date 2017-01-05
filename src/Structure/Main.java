@@ -3,7 +3,6 @@ package Structure;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
-// there is polymorphism's example
 public class Main {
 	
 

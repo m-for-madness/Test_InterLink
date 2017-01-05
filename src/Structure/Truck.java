@@ -1,5 +1,6 @@
 package Structure;
 
+//method 'sentinel' - polymorphism
 public class Truck extends Autobus {
 	// the second specified field in extended class
 	private int tonnage;
@@ -14,7 +15,6 @@ public class Truck extends Autobus {
 		tonnage += i;
 	}
 
-	// it is our method for polymorphism
 	public void sentinel() {
 		System.out.println("Output the result of Truck's method - " + this.getClass().getSimpleName());
 	}

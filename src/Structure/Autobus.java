@@ -1,5 +1,5 @@
 package Structure;
-
+//method 'sentinel' - polymorphism
 // extended class  - example of inheritance
 public class Autobus extends Car {
 	// there already was one specified field
@@ -19,7 +19,6 @@ public class Autobus extends Car {
 		super(model,day_production);
 		passengers_quantity = 2;
 	}
-	// it is our method for polymorphism
 	public void sentinel(){
 		System.out.println("Output the result of Autobus' method - "+ this.getClass().getSimpleName());
 	}

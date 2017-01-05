@@ -1,6 +1,8 @@
 package Structure;
-// this class have specified fields, method sentinel for polymorphism 
-// and method characterized which uses our specified fields
+
+// this class have specified fields, method 'sentinel' for polymorphism 
+// and method 'characterized' which uses our specified fields
+
 public class Coupe extends Car {
 	private double volume;
 	private int quantity_of_doors;
